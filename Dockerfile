@@ -6,7 +6,6 @@ ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.12.6
 ENV DOCKER_SHA256 cadc6025c841e034506703a06cf54204e51d0cadfae4bae62628ac648d82efdd
 # ENV RANCHER_COMPOSE_VERSION v0.12.5
-ENV GLIDE_VERSION v0.12.3
 ENV KOPS_VERSION 1.6.0
 ENV KUBECTL_VERSION v1.6.3
 
@@ -23,7 +22,6 @@ RUN set -x \
 	&& rmdir docker \
 	&& rm docker.tgz \
 	&& docker -v \
-	&& curl https://glide.sh/get | sh \
 	&& curl -LO https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl \
 	&& mv kubectl /usr/local/bin/ \
 	&& chmod +x /usr/local/bin/kubectl \
