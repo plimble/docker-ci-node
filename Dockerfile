@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:8.1.2
+FROM mhart/alpine-node:7.9.0
 
 RUN apk add --no-cache tar gzip libc6-compat curl wget git openssh-client bash g++
 
