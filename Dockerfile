@@ -1,6 +1,6 @@
 FROM mhart/alpine-node:8.1.2
 
-RUN apk add --no-cache tar gzip curl wget git openssh-client bash g++
+RUN apk add --no-cache tar gzip libc6-compat curl wget git openssh-client bash g++
 
 ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.12.6
