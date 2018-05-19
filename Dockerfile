@@ -27,8 +27,7 @@ RUN set -x \
 	&& chmod +x /usr/local/bin/kubectl \
 	&& curl -fSL https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION}/kops-linux-amd64 -o kops \
 	&& mv kops /usr/local/bin/ \
-	&& chmod +x /usr/local/bin/kops \
-	&& apk add yarn
+	&& chmod +x /usr/local/bin/kops
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
