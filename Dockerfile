@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:7.9.0
+FROM mhart/alpine-node:8
 
 RUN apk add --no-cache tar gzip libc6-compat curl wget git openssh-client bash g++
 
@@ -6,8 +6,8 @@ ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.12.6
 ENV DOCKER_SHA256 cadc6025c841e034506703a06cf54204e51d0cadfae4bae62628ac648d82efdd
 # ENV RANCHER_COMPOSE_VERSION v0.12.5
-ENV KOPS_VERSION 1.6.0
-ENV KUBECTL_VERSION v1.6.3
+ENV KOPS_VERSION 1.9.0
+ENV KUBECTL_VERSION v1.10.1
 
 RUN set -x \
   # && wget -O /tmp/rancher-compose-linux-amd64-${RANCHER_COMPOSE_VERSION}.tar.gz "https://github.com/rancher/rancher-compose/releases/download/${RANCHER_COMPOSE_VERSION}/rancher-compose-linux-amd64-${RANCHER_COMPOSE_VERSION}.tar.gz" \
