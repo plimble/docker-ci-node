@@ -15,7 +15,7 @@ RUN set -x \
 	&& tar -xzvf helm.tar.gz \
 	&& mv linux-amd64/helm /usr/local/bin/helm \
 	&& rm -rf linux-amd64 helm.tar.gz \
-	&& helm version \
+	&& helm version -c \
 	&& curl -fSL "https://azuredraft.blob.core.windows.net/draft/draft-${DRAFT_VERSION}-linux-amd64.tar.gz" -o draft.tar.gz \
 	&& tar -xzvf draft.tar.gz \
 	&& mv linux-amd64/draft /usr/local/bin/draft \
